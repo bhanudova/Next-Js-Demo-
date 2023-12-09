@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center items-center">
-          <div className="flex gap-8">
+          <div className="flex gap-8 text-white">
             <FaPhoneAlt className="text-3xl" />
             <FaFacebook className="text-3xl" />
             <FaTelegram className="text-3xl" />
