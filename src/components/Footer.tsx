@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
@@ -10,7 +11,7 @@ export default function Footer() {
       <div className="flex justify-between p-10 bg-[#1D232A]">
         <div className="flex gap-10">
           <div>
-            <h2 className="font-bold text-3xl text-white">TSSS InfoTech </h2>
+            <Image src={'/tsss_logo.png'} width={500} height={500} alt="tsss_logo" className="w-[13rem]"/>
           </div>
           <div className="text-gray-300">
             <h2 className="text-2xl font-semibold">Address</h2>

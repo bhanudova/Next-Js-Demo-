@@ -6,7 +6,7 @@ export default function Main() {
             <div className="grid grid-cols-2">
                 <div>
                     <div className="flex justify-center items-center">
-                        <Image src={'/home1.jpg'} width={500} height={500} alt="home" className="w-[28rem]" style={{borderRadius:'49% 51% 67% 33% / 46% 51% 49% 54% ',boxShadow:'2px 1px 10px black'}}/>
+                        <Image src={'/home1.jpg'} width={500} height={500} alt="home" className="w-[28rem]" style={{ borderRadius: '49% 51% 67% 33% / 46% 51% 49% 54% ', boxShadow: '2px 1px 10px black' }} />
                     </div>
 
                 </div>
@@ -17,17 +17,19 @@ export default function Main() {
                         </p>
                         <div className="flex justify-center items-center mt-4 ">
                             <div className="flex gap-8  bg-black/5 rounded-md p-4" style={{ boxShadow: '2px 1px 6px greay' }}>
-                                <div>
-                                    <div className="flex justify-center items-center">
-                                        <Image src={'/seo_logo.png'} width={500} height={500} alt="SEO" className="w-16 opacity-90" />
+                                <div className="flex justify-center items-center">
+                                    <div >
+                                        <Image src={'/seo_logo.png'} width={500} height={500} alt="SEO" className="w-24 lg:w-16 opacity-90" />
+                                        <h2 className="font-medium text-xs font-sans text-center">SEO</h2>
                                     </div>
-                                    <h2 className="font-medium text-xs font-sans text-center">SEO</h2>
                                 </div>
-                                <div>
-                                    <div className="flex justify-center items-center">
-                                        <Image src={'/sd_logo.png'} width={500} height={500} alt="SD" className="w-16 opacity-90" />
+                                <div className="flex justify-center items-center">
+                                    <div>
+                                        <div className="flex justify-center items-center">
+                                            <Image src={'/sd_logo.png'} width={500} height={500} alt="SD" className="w-14 lg:w-16 opacity-90" />
+                                        </div>
+                                        <h2 className="font-medium text-xs font-sans text-center">Software Development</h2>
                                     </div>
-                                    <h2 className="font-medium text-xs font-sans text-center">Software Development</h2>
                                 </div>
                                 <div>
                                     <div className="flex justify-center items-center">

@@ -2,10 +2,12 @@
 import Link from "next/link"
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
     const [color, setColor] = useState('transparent')
     const [textColor, setTextColor] = useState('white')
+    const [logo, setLogo] = useState('/tsss_logo.png')
 
     const [nav, setNav] = useState(false)
     const handelNav = () => {
@@ -17,9 +19,11 @@ export default function Navbar() {
             if (window.scrollY >= 80) {
                 setColor('#ffffff')
                 setTextColor('#000000')
+                setLogo('/tsss_logo_black.png')
             } else {
                 setColor('transparent')
                 setTextColor('#ffffff')
+                setLogo('/tsss_logo.png')
             }
         }
         window.addEventListener('scroll', changeColor)
@@ -49,10 +53,9 @@ export default function Navbar() {
         <div style={{ backgroundColor: `${color}` }} className="fixed left-0 top-0 w-full z-10 ease-in duration-200">
             <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
                 <Link href="/">
-                    <h1 style={{ color: `${textColor}` }} className="font-bold text-2xl">TSSS InfoTech</h1>
+                    <Image src={`${logo}`} width={500} height={500} alt="tsss_logo" className="w-[10rem] lg:w-[13rem]" />
                 </Link>
                 <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
-                    <li className="p-4"><Link href="/">Home</Link></li>
                     <li className="p-4"><Link href="/process">Process</Link></li>
                     <li className="p-4"><Link href="/services">Services</Link></li>
                     <li className="p-4"><Link href="/works">Works</Link></li>
@@ -78,7 +81,6 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 <div className={nav ? 'absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
                     <ul>
-                        <li className="p-4 text-4xl hover:text-gray-500"><Link href="/">Home</Link></li>
                         <li className="p-4 text-4xl hover:text-gray-500"><Link href="/">Process</Link></li>
                         <li className="p-4 text-4xl hover:text-gray-500"><Link href="/">Services</Link></li>
                         <li className="p-4 text-4xl hover:text-gray-500"><Link href="/">Works</Link></li>
