@@ -4,7 +4,7 @@ export default function Hero() {
     return (<>
         <div className="flex justify-center items-center h-screen bg-fixed bg-cover custom-image">
             {/* OverLay */}
-            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]" />
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"/>
             <div className="p-5 text-white z-[5] pt-16">
                 <h1 className="text-3xl">Welcome to</h1>
                 <h2 className="text-5xl font-bold mt-2">TSSS Infotech & Infra Private Limited</h2>
